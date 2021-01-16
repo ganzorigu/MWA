@@ -1,4 +1,5 @@
 make following changes on the meanGames DB.
+   
     db.games.update({}, {$set: {"publisher":[]}}, {multi:true});
     db.games.update({}, {$set: {"reviews":[]}}, {multi:true});
 
