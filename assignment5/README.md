@@ -1,51 +1,53 @@
-make following changes on the meanGames DB.
-   
-    db.games.update({}, {$set: {"publisher":[]}}, {multi:true});
-    db.games.update({}, {$set: {"reviews":[]}}, {multi:true});
+Make following changes on the **meanGames** db on the mongodb.
 
-REST API
+```   
+db.games.update({}, {$set: {"publisher":[]}}, {multi:true});
+db.games.update({}, {$set: {"reviews":[]}}, {multi:true});
+```
 
-GET all games
+## REST API
+
+* GET all games 
 http://localhost:4000/api/games/
 
-GET one with gameId
+* GET one with gameId
 http://localhost:4000/api/games/:gameId
 
-POST new game 
+* POST new game 
 http://localhost:4000/api/games/
 
 parameters:    
-    title: 
-    year: 
-    rate: 
-    price: 
-    minPlayers: 
-    maxPlayers: 
-    publisher: []
-    reviews: []
-    minAge: 
-    designers: 
-
-UPDATE one with gameID
+```
+    title: String 
+    year: Number
+    rate: Number
+    price: Number
+    minPlayers: Number
+    maxPlayers: Number
+    publisher: [publisher]
+    reviews: [publisher]
+    minAge: Number
+    designers: String
+```
+* UPDATE one with gameID
 http://localhost:4000/api/games/:gameId
 
 parameters:    
-    title: 
-    year: 
-    rate: 
-    price: 
-    minPlayers: 
-    maxPlayers: 
-    publisher: []
-    reviews: []
-    minAge: 
-    designers: 
+```
+    title: String 
+    year: Number
+    rate: Number
+    price: Number
+    minPlayers: Number
+    maxPlayers: Number
+    publisher: [publisher]
+    reviews: [publisher]
+    minAge: Number
+    designers: String
+```
 
 DELETE one with gameID
 http://localhost:4000/api/games/:gameId
-
-
-
 
 GET all publishers of game
 http://localhost:4000/api/games/:gameId/publishers
@@ -56,18 +58,22 @@ http://localhost:4000/api/games/:gameId/publishers/:publisherId
 POST add new publisher in to this game
 http://localhost:4000/api/games/:gameId/publishers
 
-parameters:        
-    lng : "longitude"
-    lat : "latitude"        
-    name 
+parameters:      
+```  
+    lng : Number
+    lat : Number
+    name : String
+```
 
 UPDATE one with publisherId
 http://localhost:4000/api/games/:gameId/publishers/:publisherId
 
-parameters:        
-    lng : "longitude"
-    lat : "latitude"        
-    name 
+parameters:      
+```  
+    lng : Number
+    lat : Number
+    name : String
+```
 
 DELETE one with publisherId
 http://localhost:4000/api/games/:gameId/publishers/:publisherId

@@ -1,3 +1,3 @@
-headless MEAN Games RESTful application.
+## MEAN Games restful application.
 
-Note: including reviews and publisher
+**Note**: *including reviews and publisher*
