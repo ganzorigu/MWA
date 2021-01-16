@@ -1,0 +1,34 @@
+{
+	"_id": {
+		"$oid": "6001121e6da39a3062c4fc48"
+	},
+	"name": "Jack",
+	"gpa": "3.0",
+	"studentId": "101",
+	"address": [
+		"Walnut Creek St, 98145 Los Angeles, CA"
+	]
+}
+{
+	"_id": {
+		"$oid": "600112316da39a3062c4fc49"
+	},
+	"name": "Jill",
+	"gpa": "3.3",
+	"studentId": "102",
+	"address": [
+		"1000N St, 57556 Fairfield, IA",
+		"21 Jump street, 12254 Los Angeles, CA"
+	]
+}
+{
+	"_id": {
+		"$oid": "600113a26da39a3062c4fc4b"
+	},
+	"name": "Jim",
+	"gpa": "2.8",
+	"studentId": "103",
+	"address": [
+		"Main St, 98145 Seattle, WA"
+	]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "question2",
+  "version": "1.0.0",
+  "description": "headless application to work with SchoolDB. add address as a sub-document to the students. add API for address.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ganzorig Ulziibayar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12"
+  }
+}
