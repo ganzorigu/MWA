@@ -72,82 +72,83 @@ module.exports.addressesAddOne = function(req, res){
 
 
 module.exports.addressesGetOne = function(req, res) {
-    // const gameId = req.params.gameId; 
-    // const reviewId = req.params.reviewId; 
-    // Game.findOne({"_id": gameId, "reviews._id": reviewId}, function(err, obj) {
-    //     let response = {
-    //         status : 200,
-    //         message : obj
-    //     };
-    //     if (err) {
-    //         response.status = 500;
-    //         response.message = {"message" : "System Error"};
-    //         console(err);
-    //     } else if (!obj) {
-    //         response.status = 404;
-    //         response.message = {"message" : "ReviewId or GameId not found"};
-    //     } else {
-    //         response.status = 200;
-    //         response.message = obj.reviews.id(reviewId);
-    //     }
+    const studentId = req.params.studentId; 
+    const addressId = req.params.addressId; 
+    Student.findOne({"_id": studentId, "address._id": addressId}, function(err, obj) {
+        let response = {
+            status : 200,
+            message : obj
+        };
+        if (err) {
+            response.status = 500;
+            response.message = {"message" : "System Error"};
+            console(err);
+        } else if (!obj) {
+            response.status = 404;
+            response.message = {"message" : "addressId or studentId not found"};
+        } else {
+            response.status = 200;
+            response.message = obj.address.id(addressId);
+        }
 
-    //     res.status(response.status).json(response.message);
-    // });
+        res.status(response.status).json(response.message);
+    });
 }
 
 
 module.exports.addressesUpdateOne = function(req, res) {
-    // const gameId = req.params.gameId; 
-    // const reviewId = req.params.reviewId; 
-    // Game.updateOne(
-    //     {"_id":gameId, "reviews._id": reviewId},
-    //     {$set: {
-    //         "reviews.$.reviewer" : req.body.reviewer,
-    //         "reviews.$.reviewDate" : req.body.reviewDate,
-    //         "reviews.$.reviewText" : req.body.reviewText            
-    //     }}, function(err, doc) {
-    //         let response = {
-    //             status : 204,
-    //             message : {"message" : "updated"}
-    //         };
-    //         if(err){
-    //             response.status = 500;
-    //             response.message = {"message" : "System Error"};
-    //             console(err);
-    //         } else {
-    //             if (doc.nModified == 0) {
-    //                 response.status = 404;
-    //                 response.message = {"message" : "ReviewId or GameId not found"};
-    //             }
-    //         }
-    //         res.status(response.status).json(response.message);
-    //     });    
+    const studentId = req.params.studentId; 
+    const addressId = req.params.addressId; 
+    Student.updateOne(
+        {"_id":studentId, "address._id": addressId},
+        {$set: {
+            "address.$.street" : req.body.street,
+            "reviews.$.zipcode" : req.body.zipcode,
+            "reviews.$.city" : req.body.city,            
+            "reviews.$.country" : req.body.country,
+        }}, function(err, doc) {
+            let response = {
+                status : 204,
+                message : {"message" : "updated"}
+            };
+            if(err){
+                response.status = 500;
+                response.message = {"message" : "System Error"};
+                console(err);
+            } else {
+                if (doc.nModified == 0) {
+                    response.status = 404;
+                    response.message = {"message" : "StudentId or addressId not found"};
+                }
+            }
+            res.status(response.status).json(response.message);
+        });    
 }
 
 
 module.exports.addressesDeleteOne = function(req,res) {
-    // const gameId = req.params.gameId; 
-    // const reviewId = req.params.reviewId; 
-    // Game.updateOne(
-    //     {"_id":gameId},
-    //     {$pull: {"reviews": {"_id" : reviewId}}
-    //     },
-    //     function(err, doc) {
-    //         let response = {
-    //             status : 204,
-    //             message : {"message" : "deleted"}
-    //         };
-    //         if(err){
-    //             response.status = 500;
-    //             response.message = {"message" : "System Error"};
-    //             console.log(err);
-    //         } else {
-    //             if (doc.nModified == 0) {
-    //                 response.status = 404;
-    //                 response.message = {"message" : "ReviewId or GameId not found"};
-    //             }
-    //         }
-    //         res.status(response.status).json(response.message);
-    //     }
-    // );
+    const studentId = req.params.studentId; 
+    const addresId = req.params.addressId; 
+    Student.updateOne(
+        {"_id":studentId},
+        {$pull: {"address": {"_id" : addresId}}
+        },
+        function(err, doc) {
+            let response = {
+                status : 204,
+                message : {"message" : "deleted"}
+            };
+            if(err){
+                response.status = 500;
+                response.message = {"message" : "System Error"};
+                console.log(err);
+            } else {
+                if (doc.nModified == 0) {
+                    response.status = 404;
+                    response.message = {"message" : "StudentId or AddressId not found"};
+                }
+            }
+            res.status(response.status).json(response.message);
+        }
+    );
 }
