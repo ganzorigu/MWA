@@ -1,17 +1,34 @@
 var mongoose = require("mongoose");
 
+
+const reviewSchema = new mongoose.Schema({
+    reviewer: {
+        type : String,
+        required: true
+    },
+    reviewDate: {
+        type : String,
+        required: true
+    },
+    reviewText: {
+        type : String,
+        required : true
+    }
+    
+});
+
 const publisherSchema = new mongoose.Schema({
 name: {
-    type: String,
-    required: true
+    type: String
+    //required: true
 },
 country: {
-    type: String,
-    required: true
+    type: String
+    //required: true
 },
 established: {
-    type: Date,
-    required: true
+    type: Date
+    //required: true
 },
 location: {
     address: String,
@@ -46,7 +63,8 @@ const gameSchema = new mongoose.Schema({
         max: 5,
         "default": 1
     },
-    publisher: publisherSchema
+    publisher: [publisherSchema],
+    reviews : [reviewSchema]
 });
 
 mongoose.model("Game", gameSchema, "games"); // Collection in MongoDB is Games
