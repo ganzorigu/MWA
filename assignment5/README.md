@@ -7,16 +7,16 @@ db.games.update({}, {$set: {"reviews":[]}}, {multi:true});
 
 ## REST API
 
-* GET all games 
+* **GET** all games 
 http://localhost:4000/api/games/
 
-* GET one with gameId
+* **GET** one with gameId
 http://localhost:4000/api/games/:gameId
 
-* POST new game 
+* **POST** new game 
 http://localhost:4000/api/games/
 
-parameters:    
+ **POST** parameters:    
 ```
     title: String 
     year: Number
@@ -29,10 +29,10 @@ parameters:
     minAge: Number
     designers: String
 ```
-* UPDATE one with gameID
+* **UPDATE** one with gameID
 http://localhost:4000/api/games/:gameId
 
-parameters:    
+**UPDATE** parameters:    
 ```
     title: String 
     year: Number
@@ -46,34 +46,34 @@ parameters:
     designers: String
 ```
 
-DELETE one with gameID
+**DELETE** one with gameID
 http://localhost:4000/api/games/:gameId
 
-GET all publishers of game
+**GET** all publishers of game
 http://localhost:4000/api/games/:gameId/publishers
 
-GET one publisher with id
+**GET** one publisher with id
 http://localhost:4000/api/games/:gameId/publishers/:publisherId
 
-POST add new publisher in to this game
+**POST** add new publisher in to this game
 http://localhost:4000/api/games/:gameId/publishers
 
-parameters:      
+**POST** parameters:      
 ```  
     lng : Number
     lat : Number
     name : String
 ```
 
-UPDATE one with publisherId
+**UPDATE** one with publisherId
 http://localhost:4000/api/games/:gameId/publishers/:publisherId
 
-parameters:      
+**UPDATE** parameters:      
 ```  
     lng : Number
     lat : Number
     name : String
 ```
 
-DELETE one with publisherId
+**DELETE** one with publisherId
 http://localhost:4000/api/games/:gameId/publishers/:publisherId
