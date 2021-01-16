@@ -15,8 +15,8 @@ http://localhost:4000/api/games/:gameId/reviews
 **POST** parameters:      
 ```javascript
 {  
-    reviewer : String
-    reviewData : String
+    reviewer : String,
+    reviewData : String,
     reviewText : String
 }
 ```
@@ -27,8 +27,8 @@ http://localhost:4000/api/games/:gameId/reviews/:reviewId
 **UPDATE** parameters:      
 ```javascript
 {  
-    reviewer : String
-    reviewData : String
+    reviewer : String,
+    reviewData : String,
     reviewText : String
 }
 ```
