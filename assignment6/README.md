@@ -77,3 +77,5 @@ http://localhost:4000/api/books/:bookId
 Note: *Author and Address information can be modified using following api.*
 http://localhost:4000/api/books/:bookId/authors/:authorId/addresses
 
+
+![Alt text](./screenshots/addNewBook.png?raw=true "Optional Title")
