@@ -1,0 +1,11 @@
+<h1> This is joke page</h1>
+<ul>
+    <li ng-repeat="joke in jokeCtrl.jokes">
+        {{joke.type}}<br/>
+        {{joke.setup}}<br/>
+        Show Punchline <input type="checkbox" ng-model="showPunchLine" />
+        <div ng-show="showPunchLine">
+            {{joke.punchline}}
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,8 @@
+<h1>Find your favorite song lyrics</h1>
+
+<label for="bandName">artist:</label>
+<input type="text" id="bandName" name="bandName" ng-model="bandName"><br><br>
+<label for="songName">song:</label>
+<input type="text" id="songName" name="songName" ng-model="songName"><br><br>
+<input type="button" id="searchLyric" value="search" ng-click="lyricsCtrl.findLyrics(bandName,songName)"><br><br>
+<p>{{lyricsCtrl.lyrics.lyrics}}</p>
