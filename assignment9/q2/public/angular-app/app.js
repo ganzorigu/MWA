@@ -13,6 +13,9 @@ function config($routeProvider) {
             controller : "BookDetailController",
             controllerAs : "BookDetailCtrl"
         })      
-
-    
+        .when("/addBook", {
+            templateUrl : "./angular-app/book-list/bookAdd.html",
+            controller : "BooksController",
+            controllerAs : "BooksCtrl"
+        })          
 }

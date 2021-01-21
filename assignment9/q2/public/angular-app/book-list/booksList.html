@@ -11,14 +11,18 @@
         <thead>
             <tr>
                 <th scope="col">{{BooksCtrl.title | uppercase}}</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="book in BooksCtrl.books | orderBy:'title'">
                 <td><a href="#!/book/{{book._id}}">{{$index+1}}. {{book.title}}</a></td>            
+                <td><button type="button" class="btn btn-danger" ng-click="BooksCtrl.deleteBook(book._id)">delete</button>                
             </tr>    
         </tbody>        
     </table>
+
+    <a href="#!/addBook" class="btn btn-success">Add new Book</a>    
     <!-- <ul>
         <li ng-repeat="book in BooksCtrl.books">
             <a href="#!/book/{{book._id}}">{{book.title}}</a>    

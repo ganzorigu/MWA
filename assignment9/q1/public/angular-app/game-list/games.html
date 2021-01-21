@@ -22,15 +22,15 @@
 </ul> -->
 
 <form name="gameCtrl.gameForm" ng-submit="gameCtrl.addGame()">
-    Title: <input type="text" name="title" required ng--model="gameCtrl.newGameTitle"/><br/>
-    Price: <input type="text" name="price" required ng--model="gameCtrl.newGamePrice"/><br/>
-    Year: <input type="text" name="year" required ng--model="gameCtrl.newGameYear"/><br/>
-    Rate: <input type="text" name="rate" required ng--model="gameCtrl.newGameRate"
+    Title: <input type="text" name="title" required ng-model="gameCtrl.newGameTitle"/><br/>
+    Price: <input type="text" name="price" required ng-model="gameCtrl.newGamePrice"/><br/>
+    Year: <input type="text" name="year" required ng-model="gameCtrl.newGameYear"/><br/>
+    Rate: <input type="text" name="rate" required ng-model="gameCtrl.newGameRate"
                             ng-minlength=1 ng-maxlength=2 min="1" max="5"/><br/>    
-    MinPlayers: <input type="text" name="minPlayers" required ng--model="gameCtrl.newGameMinPlayers"/><br/>
-    MaxPlayers: <input type="text" name="maxPlayers" required ng--model="gameCtrl.newGameMaxPlayers"/><br/>
-    Min Player Age: <input type="text" name="minAge" required ng--model="gameCtrl.newGameMinAge"/><br/>
-    Designer: <input type="text" name="designer" required ng--model="gameCtrl.newGameDesigner"/><br/>
+    MinPlayers: <input type="text" name="minPlayers" required ng-model="gameCtrl.newGameMinPlayers"/><br/>
+    MaxPlayers: <input type="text" name="maxPlayers" required ng-model="gameCtrl.newGameMaxPlayers"/><br/>
+    Min Player Age: <input type="text" name="minAge" required ng-model="gameCtrl.newGameMinAge"/><br/>
+    Designer: <input type="text" name="designer" required ng-model="gameCtrl.newGameDesigner"/><br/>
     <button type="submit" class="btn-success">add game</button>
 
 </form>
