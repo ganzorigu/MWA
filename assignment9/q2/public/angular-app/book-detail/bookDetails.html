@@ -1,0 +1,9 @@
+<h1>Single book details</h1>
+
+title: {{BookDetailCtrl.book.title}}</br>
+isbn: {{BookDetailCtrl.book.isbn}}</br>
+max checkout days: {{BookDetailCtrl.book.checkOutDays}}</br>
+Authors:
+<ul>
+    <li ng-repeat="author in BookDetailCtrl.authors">{{author.firstName}} {{author.lastName}}</li>
+</ul>
