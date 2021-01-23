@@ -1,0 +1,48 @@
+<h1>Updating job</h1>
+
+<div class="row">
+    <div class="col-md-5">
+        <form name="jobsCtrl.jobForm" ng-submit="JobViewCtrl.updateJob()">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter title" required ng-model="JobViewCtrl.job.title">
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary</label>
+                <input type="number" class="form-control" id="salary" placeholder="Enter salary" required ng-model="JobViewCtrl.job.salary">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter city" required ng-model="JobViewCtrl.job.location.city">
+            </div>
+            <div class="form-group">
+                <label for="state">Title</label>
+                <input type="text" class="form-control" id="state" placeholder="Enter state" required ng-model="JobViewCtrl.job.location.state">        
+            </div>
+        
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" placeholder="Enter description" required ng-model="JobViewCtrl.job.description">
+            </div>
+        
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <input type="text" class="form-control" id="experience" placeholder="Enter experience" required ng-model="JobViewCtrl.job.experience">
+            </div>
+        
+            <div class="form-group">
+                <label for="postDate">Posted date</label>
+                <input type="text" class="form-control" id="postDate" placeholder="Enter postDate" required ng-model="JobViewCtrl.job.postDate">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>                        
+
+        </form>
+    </div>
+</div>
+
+<div class="row mt-3 ml-1">
+    <div class="md-3">
+        <a href="/" class="btn btn-success">go back</a>
+    </div>
+</div>
+

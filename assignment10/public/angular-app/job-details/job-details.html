@@ -1,0 +1,58 @@
+<h1>{{JobViewCtrl.job.title}}</h1>
+<ul>
+    <li>description: {{JobViewCtrl.job.description}}</li>
+    <li>salary : {{JobViewCtrl.job.salary}}</li>
+    <li>posted date: {{JobViewCtrl.job.postDate}}</li>
+    <li>location: {{JobViewCtrl.job.location.city}}, {{JobViewCtrl.job.location.state}}</li>
+    <li>experience: {{JobViewCtrl.job.experience}}</li>    
+    required skills:
+    <ul>
+        <li ng-repeat="skill in JobViewCtrl.job.skills">
+           {{skill.skill}}</li>
+    </ul>
+</ul>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#skillModal">
+    Add Skill
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="skillModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          	<form ng-submit="JobViewCtrl.addSkill()">
+              <div class="form-group">
+                <label for="skill">Email:</label>
+                <input type="skill" class="form-control" id="skill" placeholder="Enter skill" name="skill" ng-model="JobViewCtrl.sSkill">
+              </div>
+              <div class="form-group">
+                <label for="des">Description:</label>
+                <input type="text" class="form-control" id="des" placeholder="Enter description" name="description" ng-model="JobViewCtrl.sDescription">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+  			</form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+<a href="/" class="btn btn-success">go back</a>
+
+
