@@ -1,6 +1,6 @@
 <nav ng-controller="LoginController as vm" class="navbar navbar-expand-lg navbar-fixed-top bg-dark"
     ng-init="vm.init()">
-    <!-- <div class="container-fluid"> -->
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                 aria-expanded="false" aria-controls="navbar">
@@ -16,7 +16,7 @@
                 <li ng-class="vm.isActiveTab('')">
                     <a href="#!/">Home</a>
                 </li>
-                <li ng-class="vm.isActiveTab('books')"><a href="#!/games">Add Books</a></li>
+                <li ng-class="vm.isActiveTab('books')"><a href="#!/addBook">Add Books</a></li>
                 <li ng-class="vm.isActiveTab('register')"><a href="#!/register">Register</a></li>
             </ul>
             <div class="col-xs-6">
@@ -38,5 +38,5 @@
                 </li>
             </ul>
         </div>
-    <!-- </div> -->
+    </div>
 </nav>
