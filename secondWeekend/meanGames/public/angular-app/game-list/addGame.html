@@ -1,0 +1,57 @@
+<div class="col-md-3">
+    <form name="gameCtrl.gameForm" ng-submit="gameCtrl.addGame()">
+        <div class="form-group">
+            <label for="title">Title </label>
+            <input type="text" class="form-control" id="title" placeholder="Enter the title" name="title" required ng-model="gameCtrl.newGameTitle"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="price">Price </label>
+            <input type="text" class="form-control" id="price" placeholder="Enter the price" name="price" required ng-model="gameCtrl.newGamePrice"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="year">Year </label>
+            <input type="text" class="form-control" id="year" placeholder="Enter the year" name="year" required ng-model="gameCtrl.newGameYear"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="rate">Rate </label>
+            <input type="text" class="form-control" id="rate" placeholder="Enter the rate" name="rate" required ng-model="gameCtrl.newGameRate"
+            ng-minlength=1 ng-maxlength=2 min="1" max="5"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="minPlayers">Min Players </label>
+            <input type="text" class="form-control" id="minPlayers" placeholder="Enter the min players" name="minPlayers" required ng-model="gameCtrl.newGameMinPlayers"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="maxPlayers">Max Players </label>
+            <input type="text" class="form-control" id="maxPlayers" placeholder="Enter the max players" name="maxPlayers" required ng-model="gameCtrl.newGameMaxPlayers"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="minAge">Min Player Age </label>
+            <input type="text" class="form-control" id="minAge" placeholder="Enter the min age" name="minAge" required ng-model="gameCtrl.newGameMinAge"/>        
+        </div>
+    
+        <div class="form-group">
+            <label for="designer">Designers </label>
+            <input type="text" class="form-control" id="designer" placeholder="Enter the designer" name="designer" required ng-model="gameCtrl.newGameDesigner"/>        
+        </div>
+    
+        <button type="submit" class="btn-success">add game</button>
+        <!-- Title: <input type="text" name="title" required ng--model="gameCtrl.newGameTitle"/><br/>
+        Price: <input type="text" name="price" required ng--model="gameCtrl.newGamePrice"/><br/>
+        Year: <input type="text" name="year" required ng--model="gameCtrl.newGameYear"/><br/>
+        Rate: <input type="text" name="rate" required ng--model="gameCtrl.newGameRate"
+                                ng-minlength=1 ng-maxlength=2 min="1" max="5"/><br/>    
+        MinPlayers: <input type="text" name="minPlayers" required ng--model="gameCtrl.newGameMinPlayers"/><br/>
+        MaxPlayers: <input type="text" name="maxPlayers" required ng--model="gameCtrl.newGameMaxPlayers"/><br/>
+        Min Player Age: <input type="text" name="minAge" required ng--model="gameCtrl.newGameMinAge"/><br/>
+        Designer: <input type="text" name="designer" required ng--model="gameCtrl.newGameDesigner"/><br/>
+        <button type="submit" class="btn-success">add game</button> -->
+    
+    </form>
+</div>

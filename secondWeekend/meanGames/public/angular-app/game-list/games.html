@@ -1,0 +1,42 @@
+<h1>{{gameCtrl.title}}</h1>
+
+
+<div class="form-group col-md-3">    
+    <div class="row">
+        <input type="text"  class="form-control" id="searchTitle" placeholder="Search by title" ng-model="gameCtrl.searchTitle">
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-success" ng-click="gameCtrl.searchByTitle(gameCtrl.searchTitle)">Search</button>
+    </div>    
+</div>    
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">{{gameCtrl.title}}</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="game in gameCtrl.games">
+            <td><a href="#!/game/{{game._id}}">{{game.title}}</a></td>            
+            <td><button type="button" class="btn btn-danger" ng-click="gameCtrl.deleteGame(game._id)">delete</button></td>                               
+        </tr> 
+    </tbody>
+</table>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" ng-class="(gameCtrl.currPage==0) ? 'disabled':''"><a class="page-link" ng-click="gameCtrl.getPageGames(gameCtrl.currPage-1)">Previous</a></li>
+      <li class="page-item" ng-class="(gameCtrl.currPage==$index) ? 'active':''" ng-repeat="n in [].constructor(gameCtrl.pages) track by $index"><a class="page-link" ng-click="gameCtrl.getPageGames($index)">{{$index+1}}</a></li>      
+      <li class="page-item" ng-class="(gameCtrl.currPage==gameCtrl.pages-1) ? 'disabled':''"><a class="page-link" ng-click="gameCtrl.getPageGames(gameCtrl.currPage+1)">Next</a></li>
+    </ul>
+  </nav>
+
+
+<!-- <ul>
+    <li ng-repeat="game in gameCtrl.games">
+        <a href="#!/game/{{game._id}}">{{game.title}}</a></li>
+</ul> -->
+

@@ -1,0 +1,15 @@
+<h1>
+    Information about game:
+    <p>{{SingleGameCtrl.games.title}}
+        <game-rating start={{vm.rating}}></game-rating>
+        
+    </p>
+</h1>
+
+<p>
+    Price: {{SingleGameCtrl.games.price | currency}}<br/>
+    Minimum Players : {{SingleGameCtrl.games.minPlayers}}<br/>
+    Maximum Players : {{SingleGameCtrl.games.maxPlayers}}<br/>
+    Minimum Age : {{SingleGameCtrl.games.minAge}}<br/>
+    Publisher : {{SingleGameCtrl.publishers}}
+</p>

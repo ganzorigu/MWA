@@ -1,0 +1,38 @@
+<div class="form-group col-md-3">    
+    <div class="row">
+        <input type="text"  class="form-control" id="searchTitle" placeholder="Search by title" ng-model="BooksCtrl.searchTitle">
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-success" ng-click="BooksCtrl.searchByTitle(BooksCtrl.searchTitle)">Search</button>
+    </div>    
+</div>    
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">{{BooksCtrl.title | uppercase}}</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="book in BooksCtrl.books | orderBy:'title'">
+            <td><a href="#!/book/{{book._id}}">{{$index+1+BooksCtrl.currPage*5}}. {{book.title}}</a></td>
+            <td><button type="button" class="btn btn-danger" ng-click="BooksCtrl.deleteBook(book._id)">delete</button>
+        </tr>
+    </tbody>
+</table>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" ng-class="(BooksCtrl.currPage==0) ? 'disabled':''"><a class="page-link" ng-click="BooksCtrl.getPageBooks(BooksCtrl.currPage-1)">Previous</a></li>
+      <li class="page-item" ng-class="(BooksCtrl.currPage==$index) ? 'active':''" ng-repeat="n in [].constructor(BooksCtrl.pages) track by $index"><a class="page-link" ng-click="BooksCtrl.getPageBooks($index)">{{$index+1}}</a></li>      
+      <li class="page-item" ng-class="(BooksCtrl.currPage==BooksCtrl.pages-1) ? 'disabled':''"><a class="page-link" ng-click="BooksCtrl.getPageBooks(BooksCtrl.currPage+1)">Next</a></li>
+    </ul>
+  </nav>
+
+<a href="#!/addBook" class="btn btn-success">Add new Book</a>
+<!-- <ul>
+        <li ng-repeat="book in BooksCtrl.books">
+            <a href="#!/book/{{book._id}}">{{book.title}}</a>    
+        </li>
+    </ul> -->

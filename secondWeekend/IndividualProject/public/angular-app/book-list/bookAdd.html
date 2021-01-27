@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new book</title>
+</head>
+<body>
+    <form name="BooksCtrl.bookForm" ng-submit="BooksCtrl.addBook()">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title" required ng-model="BooksCtrl.newBookTitle">          
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input type="text" class="form-control" id="isbn" placeholder="Enter isbn" required ng-model="BooksCtrl.newBookIsbn">          
+        </div>
+        <div class="form-group">
+            <label for="checkoutDays">Checkout Days</label>
+            <input type="text" class="form-control" id="checkoutDays" placeholder="Enter checkoutDays" required ng-model="BooksCtrl.newBookCheckoutDays">          
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</body>
+</html>
