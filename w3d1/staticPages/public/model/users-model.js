@@ -1,5 +1,7 @@
 var mongoose = require("mongoose");
 
+// students information is stored here.
+// There is only one faculty user which is hardcoded.
 var addressSchema = new mongoose.Schema({
     street: {
         type: String,
