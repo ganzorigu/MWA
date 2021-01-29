@@ -8,4 +8,4 @@ var attendanceSchema = new mongoose.Schema({
     state : String    
 });
 
-mongoose.model("attendanceSchema", userSchema);
+mongoose.model("Attendance", attendanceSchema, "Attendances");

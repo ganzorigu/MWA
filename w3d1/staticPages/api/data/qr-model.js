@@ -4,12 +4,7 @@ var mongoose = require("mongoose");
 // secret key is hardcoded.
 var qrSchema = new mongoose.Schema({
     studentId: String,
-    qrText: String,
-    img:
-    {
-        data: Buffer,
-        contentType: String
-    }
+    qrText: String
 });
 
-mongoose.model("QrImage", qrSchema);
+mongoose.model("QrModel", qrSchema, "Qrs");
