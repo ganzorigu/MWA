@@ -1,27 +1,19 @@
-## used modules so far
-```    
-    "bcrypt": "^5.0.0",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.14",
-    "qrcode": "^1.4.4"
-```
+# Functionality
+* CRUD operation on students for attendance
 
-*Note: qrcode is generated and stored in database when new student is registered by faculty.*
+## folder structure
+* attendance-proj (Angular project)
+* controllers (express controllers)
+* route (Express router)
 
+### Routes at backend
 ```
-qrcode = studentId+secretKey
-```
-* after parsing studentId from qrCode image. system will take attendance based on the current system tim.
-
-
-### Routes at backend used so far
-```
-router.route("/students")    
+router.route("/students") 
+    .get(studentsController.studentsGetAll)   
     .post(studentsController.register);
 
 router.route("/students/:studentId")
+    .get(studentsController.studentsGetOne)
     .put(studentsController.studentsUpdateOne)
     .delete(studentsController.studentsDeleteOne);
     
