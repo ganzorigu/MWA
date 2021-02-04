@@ -1,0 +1,38 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Student Attendance System</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li role="presentation"
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/">Home</a>
+        </li>
+        <li role="presentation" routerLinkActive="active"><a routerLink="/profile">Profile</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['/faculty']">Faculty</a></li>        
+        <li role="presentation" routerLinkActive="active"><a routerLink="/scan">Scan</a></li>
+        <li role="presentation" routerLinkActive="active"><a routerLink="/attendance">Attendance</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Login</a></li>            
+          </ul>
+        </li>
+      </ul>
+    </div>        
+  </div>
+</nav>
+
+<div class="container">
+  <div class="col-md-12">
+    
+    <router-outlet></router-outlet>
+    
+    <!-- <app-recipes *ngIf="loadedFeature=='recipe'"></app-recipes>
+    <app-shopping-list *ngIf="loadedFeature!='recipe'"></app-shopping-list> -->
+  </div>
+</div>
