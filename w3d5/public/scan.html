@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Student Attendance System</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/faculty">Faculty</a></li>
+            <li class="active"><a href="/scan">Scan</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <img src="img/qr_scan.png" alt="qr code" width="300" height="300">
+              </div>
+              <div class="row">
+                <p>Please bring the QR code close to the camera</p>
+              </div>
+                
+
+            </div>
+            <div class="col-lg-6">
+
+                <table class="table">                    
+                    <tbody>
+                      <tr>                        
+                        <td ><strong>Name:</strong></td>
+                        <td>John Doe</td>                        
+                      </tr>
+                      <tr>                        
+                        <td><strong>student id:</strong></td>
+                        <td>641245</td>                        
+                      </tr>       
+                      <tr>                        
+                        <td><strong>Arrived time:</strong></td>
+                        <td>9:55am</td>                        
+                      </tr>                      
+                    </tbody>
+                  </table>
+<!-- 
+                <p>studentId: 641245</p>
+                <p>Name: John Doe</p>
+                <p>arrived Time: 9:55am</p> -->
+            </div>
+          </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Student Attendance System</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/home">Home</a></li>
+                <li class="active"><a href="/profile">Profile</a></li>
+                <li><a href="/faculty">Faculty</a></li>
+                <li><a href="/scan">Scan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>Update Student information</h1>
+        <div class="student-form">
+            
+            <form name="studentForm">
+                <div class="form-group">
+                    <label for="firstname">First name:</label>
+                    <input type="text" class="form-control" id="firstname" value="John" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last name:</label>
+                    <input type="text" class="form-control" id="lastname" value="Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student id:</label>
+                    <input type="number" class="form-control" id="studentId" value="454511" required>
+                </div>
+                <div class="form-group">
+                    <label for="street">Street:</label>
+                    <input type="text" class="form-control" id="street" value="1000N St" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" value="Fairfield" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" class="form-control" id="state" value="IA" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip:</label>
+                    <input type="text" class="form-control" id="zip" value="52557" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+
+            </form>
+        </div>
+
+
+</body>
+
+</html>

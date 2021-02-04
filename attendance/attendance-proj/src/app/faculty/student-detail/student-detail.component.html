@@ -1,0 +1,83 @@
+
+<div class="well">
+  <div class="row">
+    <div class="col-xs-12">
+        <label>User Id:</label>
+    </div>
+    <div class="col-xs-12">
+        <p>{{student.studentId}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <label>Name:</label>
+    </div>
+    <div class="col-xs-6">
+        <p>{{student.firstname}} {{student.lastname}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <label>Username:</label>
+    </div>
+    <div class="col-xs-12">
+        <p>{{student.username}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <label>Password:</label>
+    </div>
+    <div class="col-xs-12">
+        <p>{{student.password}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <label>Secret Key:</label>
+    </div>
+    <div class="col-xs-12">
+        <p>{{student.secretKey}}</p>
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="well">
+  <form #postForm="ngForm" (ngSubmit)="onUpdateStudent()">
+    <div class="form-group">
+        <label for="firstname">First name:</label>
+        <input type="text" class="form-control" id="firstname" required name="firstname" [ngModel]="student.firstname" disabled>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last name:</label>
+        <input type="text" class="form-control" id="lastname" required ngModel name="lastname" [ngModel]="student.lastname">
+    </div>
+  
+    <div class="form-group">
+      <label for="username">User name:</label>
+      <input type="text" class="form-control" id="username" required ngModel name="username" [ngModel]="student.username">
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" required ngModel name="password" [ngModel]="student.password">
+    </div>
+    
+    <div class="form-group">
+        <label for="studentId">Student id:</label>
+        <input type="text" class="form-control" id="studentId" required ngModel name="studentId" [ngModel]="student.studentId">
+    </div>
+  
+    <div class="form-group">
+      <label for="secretKey">Secret Key:</label>
+      <input type="text" class="form-control" id="secretKey" required ngModel name="secretKey" [ngModel]="student.secretKey">
+    </div>       
+  
+    <button type="submit" class="btn btn-warning" [disabled]="!postForm.valid">Submit</button>
+  
+  </form>
+</div>
+
+
+
+ -->
