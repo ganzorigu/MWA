@@ -16,13 +16,15 @@ import { StudentListComponent } from './faculty/student-list/student-list.compon
 import { FormsModule } from '@angular/forms';
 import { StudentDetailComponent } from './faculty/student-detail/student-detail.component';
 import { StudentUpdateComponent } from './faculty/student-update/student-update.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'faculty', component: FacultyComponent },  
   { path: 'faculty/add', component: StudentAddComponent },  
   { path: 'faculty/update/:id', component: StudentUpdateComponent },
-  { path: 'scan', component: ScanComponent }  
+  { path: 'scan', component: ScanComponent },  
+  { path: 'attendance', component: AttendanceComponent }
 ];
 
 
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     StudentAddComponent,
     StudentListComponent,
     StudentDetailComponent,
-    StudentUpdateComponent
+    StudentUpdateComponent,
+    AttendanceComponent
   ],
   imports: [
     BrowserModule,

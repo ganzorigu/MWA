@@ -39,6 +39,11 @@ router.route("/students/login")
     .post(studentsController.login);
 
 router.route("/attendance")
+    .get(attendanceController.getAttendance)    
     .post(attendanceController.takeAttendance);
+
+router.route("/searchAttendance") 
+    .get(attendanceController.searchStudentId);   
+
 
 module.exports=router;
